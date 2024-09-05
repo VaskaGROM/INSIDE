@@ -11,7 +11,7 @@
 # 🐧 Linux
 - **Установка**
   ```
-  git clone https://github.com/VaskaGROM/1.git && cd INSIDE && pip3 install -r Core/requirements.txt
+  git clone https://github.com/VaskaGROM/INSIDE.git && cd INSIDE && pip3 install -r Core/requirements.txt
   ```
 - **Запуск с графическим интерфейсом**
   ```
