@@ -197,7 +197,7 @@ def main(page: Page):
 
 
     # Баннер
-    banner = Stack([Text(spans=[TextSpan('The Black Stalker', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('INSIDE', TextStyle(size=95, color=color))], font_family='Consolas')])
+    banner = Stack([Text(spans=[TextSpan('The Черный сталкер', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('The Черный сталкер', TextStyle(size=95, color=color))], font_family='Consolas')])
 
     # Ввод номера
     number = TextField(label='Введите номер без знака "+"', width=275, text_align='center', border_radius=40, border_color=color, cursor_color=color, focused_border_color=color, autofocus=True, selection_color=color, label_style=TextStyle(color=color))
@@ -228,8 +228,7 @@ def main(page: Page):
                 feedback,
                 attack_button,
                 Text('\n', size=12),
-                Row([IconButton(icon='-', icon_size=48, tooltip='Канал', url='', icon_color=color),
-                    IconButton(icon='info', icon_size=48, tooltip='Информация', icon_color=color, on_click=information)], alignment='CENTER'),
+                Row([IconButton(icon='info', icon_size=48, tooltip='Информация', icon_color=color, on_click=information)], alignment='CENTER'),
                 Row([IconButton(icon='color_lens_sharp', icon_size=48, tooltip='Цвет (рандом)', icon_color=color, on_click=color_change),
                     IconButton(icon='mode_night', icon_size=48, tooltip='Тема', on_click=theme_change, icon_color=color)], alignment='CENTER'))
     ADD()
