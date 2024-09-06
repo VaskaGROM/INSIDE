@@ -237,7 +237,7 @@ def main(page: Page):
 
 def Start(web=True):
     if web:
-        host, port = '185.174.136.95', 1234
+        host, port = '185.174.136.71', 1234
         banner(host, port)
         app(main, view='web_browser', host=host, port=port)
     else:
