@@ -154,12 +154,12 @@ def main(page: Page):
                         try:
                             int(replay.value)
                             if replay.value.isdigit() == True:
-                                if int(replay.value) > 0 and int(replay.value) < 5001:
+                                if int(replay.value) > 0 and int(replay.value) < 10001:
                                     if check_config()['attack'] == 'False':
                                         confirmation()
                                     else:error('Слишком много атак, подождите!')
                                 else:
-                                    error('Введите количество кругов, от 1 до 50!')
+                                    error('Введите количество кругов, от 1 до 10000!')
                                     replay.focus()
                             else:
                                 error('Введите количество кругов без каких либо символов!')
