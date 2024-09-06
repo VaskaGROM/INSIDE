@@ -61,7 +61,7 @@ def main(page: Page):
         _color = [MY_COLOR, 'red', 'pink', 'WHITE', 'black', 'purple', 'indigo', 'blue', 'cyan', 'teal', 'green', 'lime', 'yellow', 'amber', 'orange', 'brown', 'bluegrey', 'grey']
         global color
         color = choice(_color)
-        banner.controls = [Text(spans=[TextSpan('INSIDE', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('INSIDE', TextStyle(size=95, color=color))], font_family='Consolas')]
+        banner.controls = [Text(spans=[TextSpan('The Чёрный сталкер', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('The Чёрный сталкер', TextStyle(size=95, color=color))], font_family='Consolas')]
         
         number.border_color=color
         number.cursor_color=color
