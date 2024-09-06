@@ -18,7 +18,7 @@ def main(page: Page):
     '''Окно бомбера'''
 
     page.window_center()
-    page.title = 'INSIDE'
+    page.title = 'The Black Stalker│'
     page.scroll = 'adaptive'
     page.auto_scroll = True
     page.window_width = 450
@@ -154,7 +154,7 @@ def main(page: Page):
                         try:
                             int(replay.value)
                             if replay.value.isdigit() == True:
-                                if int(replay.value) > 0 and int(replay.value) < 100:
+                                if int(replay.value) > 0 and int(replay.value) < 5001:
                                     if check_config()['attack'] == 'False':
                                         confirmation()
                                     else:error('Слишком много атак, подождите!')
@@ -197,7 +197,7 @@ def main(page: Page):
 
 
     # Баннер
-    banner = Stack([Text(spans=[TextSpan('INSIDE', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('INSIDE', TextStyle(size=95, color=color))], font_family='Consolas')])
+    banner = Stack([Text(spans=[TextSpan('The Black Stalker', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('INSIDE', TextStyle(size=95, color=color))], font_family='Consolas')])
 
     # Ввод номера
     number = TextField(label='Введите номер без знака "+"', width=275, text_align='center', border_radius=40, border_color=color, cursor_color=color, focused_border_color=color, autofocus=True, selection_color=color, label_style=TextStyle(color=color))
@@ -228,9 +228,7 @@ def main(page: Page):
                 feedback,
                 attack_button,
                 Text('\n', size=12),
-                Row([IconButton(icon='telegram', icon_size=48, tooltip='Канал', url='https://t.me/+z4L61XedSVllODAy', icon_color=color),
-                    IconButton(icon='telegram', icon_size=48, tooltip='Владелец', url='https://t.me/A_KTO_Tbl', icon_color=color),
-                    IconButton(icon='attach_money', icon_size=48, tooltip='Донат', url='https://www.donationalerts.com/r/inside_forever', icon_color=color),
+                Row([IconButton(icon='-', icon_size=48, tooltip='Канал', url='', icon_color=color),
                     IconButton(icon='info', icon_size=48, tooltip='Информация', icon_color=color, on_click=information)], alignment='CENTER'),
                 Row([IconButton(icon='color_lens_sharp', icon_size=48, tooltip='Цвет (рандом)', icon_color=color, on_click=color_change),
                     IconButton(icon='mode_night', icon_size=48, tooltip='Тема', on_click=theme_change, icon_color=color)], alignment='CENTER'))
