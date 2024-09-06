@@ -8,8 +8,6 @@ VERSION = '1.07'
 # Стандартный цвет программы
 MY_COLOR = 'deeppurpleaccent100'
 
-# Ссылка на канал
-URL_CHANNEL = 'https://t.me/+z4L61XedSVllODAy'
 
 # Название конфига
 CONFIG_NAME = 'config.json'
