@@ -154,7 +154,7 @@ def main(page: Page):
                         try:
                             int(replay.value)
                             if replay.value.isdigit() == True:
-                                if int(replay.value) > 0 and int(replay.value) < 51:
+                                if int(replay.value) > 0 and int(replay.value) < 100:
                                     if check_config()['attack'] == 'False':
                                         confirmation()
                                     else:error('Слишком много атак, подождите!')
