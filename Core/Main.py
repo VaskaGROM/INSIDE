@@ -18,7 +18,7 @@ def main(page: Page):
     '''Окно бомбера'''
 
     page.window_center()
-    page.title = 'The Black Stalker│'
+    page.title = '│The Черный сталкер│'
     page.scroll = 'adaptive'
     page.auto_scroll = True
     page.window_width = 450
@@ -61,7 +61,7 @@ def main(page: Page):
         _color = [MY_COLOR, 'red', 'pink', 'WHITE', 'black', 'purple', 'indigo', 'blue', 'cyan', 'teal', 'green', 'lime', 'yellow', 'amber', 'orange', 'brown', 'bluegrey', 'grey']
         global color
         color = choice(_color)
-        banner.controls = [Text(spans=[TextSpan('The Чёрный сталкер', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('The Чёрный сталкер', TextStyle(size=95, color=color))], font_family='Consolas')]
+        banner.controls = [Text(spans=[TextSpan('The Черный сталкер', TextStyle(size=95, foreground=Paint(color=color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'), Text(spans=[TextSpan('INSIDE', TextStyle(size=95, color=color))], font_family='Consolas')]
         
         number.border_color=color
         number.cursor_color=color
@@ -154,12 +154,12 @@ def main(page: Page):
                         try:
                             int(replay.value)
                             if replay.value.isdigit() == True:
-                                if int(replay.value) > 0 and int(replay.value) < 10001:
+                                if int(replay.value) > 0 and int(replay.value) < 100001:
                                     if check_config()['attack'] == 'False':
                                         confirmation()
                                     else:error('Слишком много атак, подождите!')
                                 else:
-                                    error('Введите количество кругов, от 1 до 10000!')
+                                    error('Введите количество кругов, от 1 до 50!')
                                     replay.focus()
                             else:
                                 error('Введите количество кругов без каких либо символов!')
@@ -237,10 +237,9 @@ def main(page: Page):
 
 def Start(web=True):
     if web:
-        host, port = '185.174.136.71', 1234
+        host, port = '127.0.0.1', 9876
         banner(host, port)
         app(main, view='web_browser', host=host, port=port)
     else:
         app(main)
-
 
