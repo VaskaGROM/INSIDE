@@ -23,7 +23,8 @@ sudo add-apt-repository universe
 apt install python3-pip
 ```
   ```
-  git clone https://github.com/VaskaGROM/The-black-stalker-bomber.git && cd INSIDE && pip3 install -r Core/requirements.txt
+  git clone https://github.com/VaskaGROM/The-black-stalker-bomber.git && cd The-black-stalker-bomber
+ && pip3 install -r Core/requirements.txt
   ```
 - **Запуск с web интерфейсом**
   ```
